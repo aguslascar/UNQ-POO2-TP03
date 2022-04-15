@@ -16,9 +16,14 @@ public class Point {
 		this.y = y;
 	}
 	
-	public void crearPunto() {
+	public void Punto() {
 		this.setX(0);
 		this.setY(0);
+	}
+	
+	public void Punto(int x1, int y1) {
+		this.setX(x1);
+		this.setY(y1);
 	}
 	
 	public void moverPunto(int newX, int newY) {
