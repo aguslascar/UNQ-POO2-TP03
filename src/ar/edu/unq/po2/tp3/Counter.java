@@ -40,4 +40,25 @@ public class Counter {
 		return cantidad;
 	}
 	
+	public int mayorCantPares(List<Integer> array) {
+		int mayor = 0;
+		for(Integer number: array) {
+			if(this.contarPares(number) > this.contarPares(mayor)) 
+				mayor = number;
+		}
+		return mayor;
+	}
+
+	private int contarPares(Integer number) {
+		int cantPares=0; 
+		int digito = 0;
+		while(number > 0) {
+			digito = number % 10;
+			if(digito % 2 == 0) 
+				cantPares++;
+				number = number/10;
+		}
+		return cantPares;
+	}
+	
 }

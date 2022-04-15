@@ -2,6 +2,8 @@ package ar.edu.unq.po2.tp3;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CounterTestCase {
 	private Counter counter;
@@ -32,25 +34,31 @@ public class CounterTestCase {
 	*/
 	@Test
 	public void testNumerosPares() {
-	// Getting the even occurrences
-	int amount = counter.contarPares();
-	// I check the amount is the expected one
-	assertEquals(amount, 1);
+		int amount = counter.contarPares();
+		assertEquals(amount, 1);
 	}
 	
 	@Test
 	public void testNumerosImpares() {
-	// Getting the even occurrences
-	int amount = counter.contarImpares();
-	// I check the amount is the expected one
-	assertEquals(amount, 9);
+		int amount = counter.contarImpares();
+		assertEquals(amount, 9);
 	}
 	
 	@Test
 	public void testMultiplos() {
-	// Getting the even occurrences
-	int amount = counter.contarMultiplos(2);
-	// I check the amount is the expected one
-	assertEquals(amount, 1);
+		int amount = counter.contarMultiplos(2);
+		assertEquals(amount, 1);
+	}
+	
+	@Test
+	public void testMayorParesEnArreglo() {
+		List<Integer> arreglo = new ArrayList<Integer>();
+		arreglo.add(12);
+		arreglo.add(23);
+		arreglo.add(8765);
+		arreglo.add(2254);
+		arreglo.add(9731);
+		int amount = counter.mayorCantPares(arreglo);
+		assertEquals(amount, 2254);
 	}
 }
