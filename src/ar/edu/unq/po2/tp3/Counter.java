@@ -61,4 +61,17 @@ public class Counter {
 		return cantPares;
 	}
 	
+	public int multiplosMayorEntre(Integer x, Integer y) {
+		/**
+		 * Se le asigna por parametro dos valores y la funcion devuelve el numero mas alto
+		 * entre 0 y 1000 que sea multiplo simultaneamente de X e Y.
+		 * En caso que no lo sean, devuelve -1.
+		 */
+		int mayor = -1;
+		for(int i = 1;i<1000;i++) {
+			if(i % x == 0 && i % y == 0)
+				mayor = i;
+		}
+		return mayor;
+	}
 }

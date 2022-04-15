@@ -61,4 +61,10 @@ public class CounterTestCase {
 		int amount = counter.mayorCantPares(arreglo);
 		assertEquals(amount, 2254);
 	}
+	
+	@Test
+	public void testMultiplosEntre0y1000() {
+		int amount = counter.multiplosMayorEntre(2,4);
+		assertEquals(amount, 996);
+	}
 }
